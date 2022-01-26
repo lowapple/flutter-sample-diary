@@ -11,15 +11,15 @@ import 'package:provider/provider.dart';
 
 import '../../view_model/base.dart';
 
-class AddEntry extends StatefulWidget {
-  static const routeName = 'add-entry';
+class PageDiaryCreate extends StatefulWidget {
+  static const routeName = 'page-diary-create';
 
-  const AddEntry({Key? key}) : super(key: key);
+  const PageDiaryCreate({Key? key}) : super(key: key);
 
-  _AddEntryState createState() => _AddEntryState();
+  _PageDiaryCreateState createState() => _PageDiaryCreateState();
 }
 
-class _AddEntryState extends State<AddEntry> {
+class _PageDiaryCreateState extends State<PageDiaryCreate> {
   Map<String, String> _formData = {};
   final _addEntryFormKey = GlobalKey<FormState>();
 
@@ -84,8 +84,7 @@ class _AddEntryState extends State<AddEntry> {
                             maxLines: null,
                             cursorColor: const Color(0xFF3C4858),
                             decoration: const InputDecoration.collapsed(
-                                hintText:
-                                    '일기를 작성해 주세요..'),
+                                hintText: '일기를 작성해 주세요..'),
                             validator: (val) {
                               return InputValidator.content(val);
                             },
